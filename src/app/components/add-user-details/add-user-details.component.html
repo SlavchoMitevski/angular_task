@@ -1,0 +1,58 @@
+<!-- The Modal -->
+<div id="myModal" class="modal open">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" (click)="closeAddUserModal()">&times;</span>
+    <strong>{{userData.firstname}} {{userData.lastname}} (Id: {{userData.id}})</strong>
+
+    <div class="container">
+      <form class="form" [formGroup]="userForm">
+        <div class="row">
+          <div class="col-25">
+            <label class="required">Address</label>
+          </div>
+          <div class="col-75">
+            <input type="text" placeholder="Enter address.." formControlName="address">
+            <div class="error-message" *ngIf="userForm.get('address') as control">
+              <span *ngIf="control.hasError('required')">Address is required.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="required">City</label>
+          </div>
+          <div class="col-75">
+            <input type="text" placeholder="Enter City.." formControlName="city">
+            <div class="error-message" *ngIf="userForm.get('city') as control">
+              <span *ngIf="control.hasError('required')">City is required.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="required">Country</label>
+          </div>
+          <div class="col-75">
+            <select formControlName="country">
+              <option value="Macedonia">Macedonia</option>
+              <option value="Switzerand">Switzerand</option>
+              <option value="Australia">Australia</option>
+              <option value="Canada">Canada</option>
+              <option value="USA">USA</option>
+            </select>
+            <div class="error-message" *ngIf="userForm.get('country') as control">
+              <span *ngIf="control.hasError('required')">Country is required.</span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="hooter">
+        <input type="button" value="Save" [disabled]="userForm.invalid" (click)="saveUserData()">
+      </div>
+    </div>
+
+  </div>
+
+</div>

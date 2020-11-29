@@ -1,0 +1,105 @@
+body {
+    background: white;
+    padding: 20px;
+    font-family: Helvetica;
+}
+
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.content .user-filter {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+}
+
+input {
+    width: 250px;
+}
+
+.user-list {
+    width: inherit;
+}
+
+.user-list ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header,
+.footer {
+    display: flex;
+    font-weight: 600;
+    background-color: #f2f2f2;
+
+}
+
+.footer {
+    justify-content: flex-end;
+    margin-right: 90px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    padding: 3px;
+}
+
+.user-details {
+    display: flex;
+}
+
+.cell {
+    display: flex;
+    padding: 5px;
+}
+
+.firstname,
+.lastname {
+    width: 40%;
+}
+
+.age {
+    justify-content: space-between;
+    width: 60px;
+}
+
+.action {
+    width: 60px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.sorting {
+    cursor: pointer;
+}
+
+.preview-user-info {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+.preview-row {
+    display: flex;
+}
+
+.preview-value {
+    margin: 0px 5px;
+}
